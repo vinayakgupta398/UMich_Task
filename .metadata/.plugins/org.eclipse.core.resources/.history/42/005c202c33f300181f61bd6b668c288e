@@ -1,0 +1,19 @@
+package NormalDistribution;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class MainClass {
+
+	public static void main(String[] args) throws Exception {
+		Class.forName("org.h2.Driver").newInstance();
+		Connection con=DriverManager.getConnection("jdbc:h2:"+"./Database/MyDataBase", "root", "password");
+		System.out.println("DataBaseCreated");
+		
+		
+		
+
+	}
+
+}

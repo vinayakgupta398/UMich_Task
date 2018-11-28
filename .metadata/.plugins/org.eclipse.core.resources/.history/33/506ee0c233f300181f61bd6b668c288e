@@ -1,0 +1,27 @@
+package NormalDistribution;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class MainClass {
+
+	public static void main(String[] args) throws Exception {
+		Class.forName("org.h2.Driver").newInstance();
+		Connection con=DriverManager.getConnection("jdbc:h2:"+"./Database/MyDataBase", "root", "password");
+		System.out.println("DataBaseCreated");
+		Statement stmt=con.createStatement();
+		String createTable="CREATE TABLE IF NOT EXISTS TABLE1"
+							+"(id INTEGER auto_increment,"
+							+"NDNumber NUMBER)";
+		stmt.executeUpdate(createTable);
+		System.out.println("Table Created");
+		
+		
+		
+		
+
+	}
+
+}
